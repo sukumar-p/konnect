@@ -1,0 +1,47 @@
+<!-- <p>
+  chat-support works!
+</p> -->
+<div class="support-cht">
+  <div class="bg-green pad-tb-10">
+    <div class="pad-20">
+      <div class="pull-left">
+        <h4 class="mar-0 clr-white">Support chat</h4>
+      </div>
+      <div class="pull-right">
+          <i class="material-icons clr-white cursor" (click)="onNoClick()">
+              close
+              </i>
+      </div>
+      <div class="clearfix"></div>   
+    </div>    
+  </div>
+  <div class="commentsList" #scrollDown>
+      <div *ngFor="let comment of commentsList">
+          <div class="pull-left">
+              <h4 class="mar-0 clr-green">
+                <span  *ngIf="comment.commentBy==='user'">You</span>
+                <span *ngIf="comment.commentBy!=='user'">Admin</span>
+              </h4>
+          </div>
+          <div class="pull-right">
+            <p>{{timeDifference(comment.createdAt)}}</p>
+          </div>
+          <div class="clearfix"></div>
+          <p class="pad-tb-10">{{comment.comment}}</p>
+        </div>
+  </div>
+  <div class="add-comment add-commnt">
+      <div class="row mar-0 pad-10 tab">
+        <div class="col-xs-10 tbl-cell">
+          <mat-form-field>
+            <textarea matInput placeholder="Type your comment" [(ngModel)]="addComments.comment"></textarea>
+          </mat-form-field>
+        </div>
+        <div class="col-xs-2 tbl-cell text-right">
+          <i class="material-icons icon-bg-green pad-10 cursor" [ngClass]="{'disabled':!addComments.comment}" (click)="addComment()">
+            send
+          </i>
+        </div>
+      </div>
+    </div>
+</div>
