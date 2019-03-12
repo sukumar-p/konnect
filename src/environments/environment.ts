@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url : "http://13.232.191.125:3001",
+  url : "https://zenworkuniversity.com",
   baseUrl : "/api/v1.0"
 };
 
