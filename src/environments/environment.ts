@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  url : "https://zenworkuniversity.com",
-  baseUrl : "/api/v1.0"
+  url : "http://localhost:3001",
+  baseUrl : "/v1"
 };
 
 /*

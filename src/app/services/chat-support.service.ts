@@ -11,9 +11,9 @@ export class chatSupportService {
   public notificationCount:Subject<any> = new Subject();
   constructor(private http: HttpClient) { }
   
-  getChartByUser(userId?) {
-    console.log("userdata",userId)
-    return this.http.get(environment.url + environment.baseUrl + "/support/get-all-by-user", {params:{userId:userId}});
+  getChartByUser() {
+    console.log("userdata")
+    return this.http.get(environment.url + environment.baseUrl + "/support/get-all-by-user");
 }
 addComment(data){
     console.log("data",data);
